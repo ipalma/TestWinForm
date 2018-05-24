@@ -29,6 +29,7 @@ namespace TestWinForm
             container = new Container();
 
             container.Register<IService<Address>, ServiceFor<Address>>();
+            container.Register<IService<Customer>, ServiceFor<Customer>>();
 
             container.Register<Form1>();
 

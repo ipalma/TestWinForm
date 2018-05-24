@@ -31,21 +31,17 @@ namespace TestWinForm
             
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dataGridView1.SelectedRows.Count != 0)
-            {
-                var row = dataGridView1.SelectedRows[0];
-                txtAddressID.Text = (row.Cells[0].Value ?? string.Empty).ToString();
-                txtAddressLine1.Text = (row.Cells[1].Value ?? string.Empty).ToString();
-                txtAddressLine2.Text = (row.Cells[2].Value ?? string.Empty).ToString();
-                txtCity.Text = (row.Cells[3].Value ?? string.Empty).ToString();
-                txtStateProvince.Text = (row.Cells[4].Value ?? string.Empty).ToString();
-                txtCountryRegion.Text = (row.Cells[5].Value ?? string.Empty).ToString();
-                txtPostalCode.Text = (row.Cells[6].Value ?? string.Empty).ToString();
-                dtpModifiedDate.Value = row.Cells[8].Value != null ? DateTime.Parse(row.Cells[8].Value.ToString()) : DateTime.Now;
-            }
-
+            var row = dataGridView1.CurrentRow;
+            txtAddressID.Text = (row.Cells[0].Value ?? string.Empty).ToString();
+            txtAddressLine1.Text = (row.Cells[1].Value ?? string.Empty).ToString();
+            txtAddressLine2.Text = (row.Cells[2].Value ?? string.Empty).ToString();
+            txtCity.Text = (row.Cells[3].Value ?? string.Empty).ToString();
+            txtStateProvince.Text = (row.Cells[4].Value ?? string.Empty).ToString();
+            txtCountryRegion.Text = (row.Cells[5].Value ?? string.Empty).ToString();
+            txtPostalCode.Text = (row.Cells[6].Value ?? string.Empty).ToString();
+            dtpModifiedDate.Value = row.Cells[8].Value != null ? DateTime.Parse(row.Cells[8].Value.ToString()) : DateTime.Now;
         }
     }
 }

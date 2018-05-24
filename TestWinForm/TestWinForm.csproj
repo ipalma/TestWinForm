@@ -60,6 +60,18 @@
     <Compile Include="AddressWindow.Designer.cs">
       <DependentUpon>AddressWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerAddressWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerAddressWindow.Designer.cs">
+      <DependentUpon>CustomerAddressWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerWindow.Designer.cs">
+      <DependentUpon>CustomerWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +82,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddressWindow.resx">
       <DependentUpon>AddressWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerAddressWindow.resx">
+      <DependentUpon>CustomerAddressWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerWindow.resx">
+      <DependentUpon>CustomerWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

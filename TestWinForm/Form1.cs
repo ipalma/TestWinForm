@@ -15,16 +15,25 @@ namespace TestWinForm
     public partial class Form1 : Form
     {
         private readonly IService<Address> _address;
-        public Form1(IService<Address> address)
+        private readonly IService<Customer> _customer;
+        public Form1(IService<Address> address
+            , IService<Customer> customer)
         {
             InitializeComponent();
             _address = address;
+            _customer = customer;
         }
 
         private void AccessAddress(object sender, EventArgs e)
         {
             AddressWindow address = new AddressWindow(_address);
             address.Show();
+        }
+
+        private void AccessCustomer(object sender, EventArgs e)
+        {
+            CustomerWindow customer = new CustomerWindow(_customer);
+            customer.Show();
         }
     }
 }
